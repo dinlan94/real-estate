@@ -10,15 +10,17 @@ const Banner = () => {
         <div className='lg:ml-8 xl:ml-[135px] flex-col items-center 
         lg:items-start text-center lg:text-left justify-center
         flex-1 px-4 lg:px-0'>
-          <h1><span>Rent</span> Your Dream House With Us.</h1>
-          <p>
+          <h1 className='text-4xl lg:text-[58px] font-semibold leading-none mb-6'>
+            <span className='text-violet-700'>Rent</span> Your Dream House With Us.
+          </h1>
+          <p className='max-w-[480px] mb-8'>
             lorem ipsum dolor si amet adadadasdsadasd
             asdasdsadasdaasdadasdsadasdasfafasfsafasfaf
             afafasfsafasf
           </p>
         </div>
         {/* image */}
-        <div>
+        <div className='hidden flex-1 lg:flex justify-end items-end'>
           <img src={Image} alt="" />
         </div>
       </div>
