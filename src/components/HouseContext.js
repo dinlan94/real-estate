@@ -19,10 +19,10 @@ const HouseContextProvider = ({ children }) => {
       return house.country;
     });
 
-    const uniqueCountries = ['Location (any)', ...
-      new Set(allCountries)];
+    const uniqueCountries = ['Location (any)', ...new Set(allCountries)];
 
     setCountries(uniqueCountries);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -30,10 +30,10 @@ const HouseContextProvider = ({ children }) => {
       return house.type;
     });
 
-    const uniqueProperties = ['Location (any)', ...
-      new Set(allProperties)];
+    const uniqueProperties = ['Location (any)', ...new Set(allProperties)];
 
     setProperties(uniqueProperties);
+    // eslint-disable-next-line
   }, []);
 
   const handleClick = () => {
@@ -48,6 +48,7 @@ const HouseContextProvider = ({ children }) => {
 
     const maxPrice = parseInt(price.split(' ')[2]);
 
+    // eslint-disable-next-line
     const newHouses = housesData.filter((house) => {
 
       const housePrice = parseInt(house.price);
@@ -99,6 +100,7 @@ const HouseContextProvider = ({ children }) => {
 
     setTimeout(() => {
       return newHouses.length < 1 ? setHouses([]) :
+        // eslint-disable-next-line
         setHouses(newHouses),
       setLoading(false);
     }, 1000);
@@ -116,8 +118,7 @@ const HouseContextProvider = ({ children }) => {
       setPrice,
       houses,
       loading,
-      handleClick,
-      loading
+      handleClick
     }}>
       {children}
     </HouseContext.Provider>
